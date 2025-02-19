@@ -16,10 +16,13 @@ function  willSuccess( marks ) {
             pass.push(markArrayREsult)
         }
     }
-    if(pass.length > fail.length && Array.isArray(marks) ){
+    if(pass.length > fail.length  ){
         return true
     }
-    if(pass.length < fail.length && Array.isArray(marks)){
+    else if(!Array.isArray(marks)){
+        return "invalid"
+    }
+    if(pass.length < fail.length ){
         return false
     }
     else{
@@ -29,5 +32,6 @@ function  willSuccess( marks ) {
 }
 
 
-let marks = [100,51,20] ;
+let marks = [60, 70, 80, 40, 30];
 const result = willSuccess(marks);
+console.log(result)

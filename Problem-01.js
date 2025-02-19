@@ -1,4 +1,4 @@
-/*function signature/sample */
+/*function signature */
 function calculateVAT( price ) {
     if(typeof amount !== "number" || amount < 0 ){
         return "invalid"
@@ -8,5 +8,4 @@ function calculateVAT( price ) {
 }
 
 const amount = 1500;
-const vat = calculateVAT(amount);
-console.log(vat)
+const vat = calculateVAT(amount);c

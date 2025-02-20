@@ -1,5 +1,6 @@
 
 function  willSuccess( marks ) {
+   if(Array.isArray(marks) && marks.every(item => typeof item === "number")){
     let markArray = [];
     let fail = [];
     let pass = [];
@@ -19,19 +20,20 @@ function  willSuccess( marks ) {
     if(pass.length > fail.length  ){
         return true
     }
-    else if(!Array.isArray(marks)){
-        return "invalid"
-    }
+    
     if(pass.length < fail.length ){
         return false
     }
     else{
         return false
     }
+   }
+   else{
+     return "Invalid"
+   }
 
 }
 
 
-let marks = [60, 70, 80, 40, 30];
+let marks = [60, 40, 40, 40, 30];
 const result = willSuccess(marks);
-console.log(result)

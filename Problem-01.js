@@ -8,4 +8,4 @@ function calculateVAT( price ) {
 }
 
 const amount = 1500;
-const vat = calculateVAT(amount);c
+const vat = calculateVAT(amount);
